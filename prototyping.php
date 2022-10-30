@@ -39,13 +39,11 @@
 
         $b1->fillData($data);
         echo $b1;
-         
+        */
         $database = new fakeDB();
         foreach ($database->recoverAllBook() as $key => $value) {
             echo $value;
         }
-
-        */
     ?>
 </body>
 </html>

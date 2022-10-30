@@ -245,7 +245,7 @@
         }
         public static function recoverBook($code)
         {
-            return recoverAllBook();
+            return;
         }
     }
 ?>
