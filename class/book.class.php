@@ -1,19 +1,23 @@
 <?php
+
+    require_once './class/author.class.php';
+    require_once './class/publisher.class.php';
     class Book 
     {
-        public $code;
-        public $title;
-        public $description;
-        public $author;
-        public $publisher;
-        public $edition;
-        public $pages;
-        public $year;
-        public $release;
-        public $price;
-        public $review; 
 
-        private function calculatePercentReview($index){
+        private $code;
+        private $title;
+        private $description;
+        private $author;
+        private $publisher;
+        private $edition;
+        private $pages;
+        private $year;
+        private $release;
+        private $price;
+        private $review; 
+
+        public function calculatePercentReview($index){
             $totalQuantify = 0;
             $array = $this->review; 
             foreach ($this->review as $key => $value) {
@@ -24,7 +28,7 @@
             return $percent;
         }
         
-        private function calculateAverageRating()
+        public function calculateAverageRating()
         {
             $average = 0;
             
@@ -35,6 +39,22 @@
             }
             return $average;
         }
+
+        public function fillData(array $data)
+        {
+            $this->code = $data[0];
+            $this->title = $data[1];
+            $this->description = $data[2];
+            $this->author = $data[3];
+            $this->publisher = $data[4];
+            $this->edition = $data[5];
+            $this->pages = $data[6];
+            $this->year = $data[7];
+            $this->release = $data[8];
+            $this->price = $data[9];
+            $this->review = $data[10];
+        }
+
         public function __toString()
         {
             return '' . $this->calculateAverageRating() . '' ;
