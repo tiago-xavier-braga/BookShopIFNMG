@@ -13,29 +13,31 @@
         public $price;
         public $review; 
 
-        private function calculateAverageRating()
-        {
-            $average = 0;
+        private function calculatePercentReview($index){
             $totalQuantify = 0;
-
+            $array = $this->review; 
             foreach ($this->review as $key => $value) {
                 $totalQuantify += $value;
             }
-
+            $percent = $array[$index] / $totalQuantify;
+            //echo '</br> Porcento: ' . $percent . '';
+            return $percent;
+        }
+        
+        private function calculateAverageRating()
+        {
+            $average = 0;
+            
             foreach ($this->review as $key => $value) {
-                $average += ((($value * 100) / $totalQuantify) / 100) * ($key + 1);
+                $average += $this->calculatePercentReview($key) * ($key + 1);
 
-                //echo '</br>' . $average . '</br>';
+                echo '</br>' . $average . '</br>';
             }
             return $average;
         }
-        private function calculatePercentReview(){
-
-        }
-
         public function __toString()
         {
-            return ''. $this->calculateAverageRating() .'';
+            return '' . $this->calculateAverageRating() . '' ;
         }
     }
 ?>
