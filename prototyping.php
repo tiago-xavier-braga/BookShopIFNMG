@@ -11,6 +11,7 @@
         require_once './class/book.class.php';
         require_once './class/author.class.php';
         require_once './class/publisher.class.php';
+        require_once './class/fakedb.class.php';
 
         $a1 = new Author();
         $a1->name = 'Ariano Suassuna';
@@ -32,13 +33,19 @@
         $b1->release = false;
         $b1->price = 242.2;
         $b1->review = array(0, 0, 1, 10, 5);
-        */
+       
         $b1 = new Book();
         $data = array(1001, 'Auto da compadecida', 'Livro de Ariano Suassuna', array($a1, $a2), $p1, 2, 120, 1967, false, 242.2, array(0, 0, 1, 10, 5));
 
         $b1->fillData($data);
         echo $b1;
+         
+        $database = new fakeDB();
+        foreach ($database->recoverAllBook() as $key => $value) {
+            echo $value;
+        }
 
+        */
     ?>
 </body>
 </html>

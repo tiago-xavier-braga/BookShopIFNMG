@@ -5,7 +5,7 @@
     class Book 
     {
 
-        private $code;
+        public $code;
         private $title;
         private $description;
         private $author;
@@ -57,7 +57,29 @@
 
         public function __toString()
         {
-            return '' . $this->calculateAverageRating() . '' ;
+            $textAuthor = '';
+            $textReview = '';
+
+            foreach ($this->author as $key => $value) {
+                $textAuthor .= ' ' . $value . '';
+            }
+
+            foreach ($this->review as $key => $value) {
+                # code...
+                $textReview .= '' . $key . ': ' . $value . '</br>';
+            }
+            return 
+            '' . $this->code . '</br>'
+            . $this->title . '</br>'
+            . $this->description . '</br>'
+            . $textAuthor . '</br>'
+            . $this->publisher . '</br>'
+            . $this->edition . '</br>'
+            . $this->pages . '</br>'
+            . $this->year . '</br>'
+            . $this->release . '</br>'
+            . $this->price . '</br>'
+            . $textReview  . '</br>' ;
         }
     }
 ?>
