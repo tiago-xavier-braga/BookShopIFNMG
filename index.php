@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./public/css/index.css">
     <link rel="stylesheet" href="./public/css/header.css">
+    <link rel="stylesheet" href="./public/css/footer.css">
     <link rel="stylesheet" href="./public/css/responsive.css">
     <title>Bookshop</title>
 </head>
@@ -22,24 +23,17 @@
         <?php
 
         $database = new fakeDB();
-        $boxBook = <<<BOOK
-        <div class="book">
-            <img src="./public/img/book/%d.jpg" class="coverBook">
-            <h3 class="fontText">%s</h3>
-            <img src="./public/img/index/5-star-gold.png" class="starBook">
-            <!-- avaliações -->
-            <p class="fontText priceBook">R$ %.2f</p>
-            <!-- Lançamento !-->
-            </div>
-BOOK;
         foreach ($database->recoverAllBook() as $key => $value) {
             $countReview = 0;
+            $clipStar = $value->calculateAverageRating() * 24;
             $boxBook = <<<BOOK
             <div class="book">
                 <img src="./public/img/book/%d.jpg" class="coverBook">
                 <h3 class="fontText">%s</h3>
                 <div class="boxStar">
-                    <img src="./public/img/index/5-star-gold.png" class="starBook">
+                    <img src="./public/img/index/5-star-grey.png" class="imgBook">
+                    <img src="./public/img/index/5-star-gold.png" class="starGreyBook" style="clip: rect( 0px, %fpx, %fpx, 0px);">
+                    <img src="./public/img/index/bg-green-left.png" style="position: absolute;left: -15px;top: 300px;">
 BOOK;
             foreach ($value->review as $j => $review) {
                 # code...
@@ -48,7 +42,7 @@ BOOK;
 
             if ($countReview != 0) {
                 # code...
-                $boxBook .= '<p class="countReview" style="margin-left: 10px">' . $countReview . ' Avaliações</p></div>';
+                $boxBook .= '<p class="countReview" style="margin-left: 10px">' . $countReview . '</p></div>';
             }else{
                 $boxBook .= '</div>';
             }
@@ -59,13 +53,14 @@ BOOK;
             } else {
                 $boxBook .= '</div>';
             }
-            
-            printf($boxBook, $value->code, $value->title, $value->price, $value->code);
+            printf($boxBook, $value->code, $value->title, $clipStar, $clipStar, $value->price, $value->code);
         }
         ?>
             </div>
         </div>
     </main>
-
+    <?php
+        require_once('./public/templates/footer.php')
+    ?>
 </body>
 </html>

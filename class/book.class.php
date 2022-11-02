@@ -34,8 +34,6 @@
             
             foreach ($this->review as $key => $value) {
                 $average += $this->calculatePercentReview($key) * ($key + 1);
-
-                echo '</br>' . $average . '</br>';
             }
             return $average;
         }

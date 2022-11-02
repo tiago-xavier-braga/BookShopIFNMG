@@ -70,11 +70,13 @@ main{
     background: var(--white);
     border-radius: 10px;
 }
-.book img{
-    width: 40%;
+.imgBook{
+    width: 120px;
+    opacity: 0.7;
 }
 .coverBook{
     margin-top: 10px;
+    width: 40%;
 }
 .fontText {
     font-family: 'Ubuntu', sans-serif;
@@ -96,6 +98,11 @@ main{
     align-items: center;
     justify-content: center;
     width: 100%;
+}
+.starGreyBook{
+    width: 120px;
+    margin-left: -20px;
+    position: absolute;
 }
 .countReview{
     font-family: 'Ubuntu';
