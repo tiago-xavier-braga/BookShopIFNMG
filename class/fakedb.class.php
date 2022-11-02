@@ -3,7 +3,7 @@
     require_once('./class/book.class.php');
     class fakeDB
     {
-        public static function recoverAllBook()
+        public function recoverAllBook()
         {
 
             // region Object Author
@@ -243,9 +243,10 @@
                 $bookL->code => $bookL,
             ];
         }
-        public static function recoverBook($code)
+        public function recoverBook($code)
         {
-            return;
+            $inBook = $this->recoverAllBook();
+            return $inBook[$code];
         }
     }
 ?>

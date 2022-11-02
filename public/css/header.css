@@ -1,0 +1,32 @@
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    margin: 0 1.8rem;
+    opacity: 0.8;
+    border-radius: 0 0 10px 10px;
+    box-sizing: border-box;
+    background-color: var(--background-color-header);
+    font-family: var(--font-family-monospace);
+}
+header div{
+    margin: 0 2rem 0 2rem;
+    width: 50%;
+}
+.headerTitle h1{
+    color: var(--green);
+}
+.headerAction{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+.headerAction a{
+    font-family: var(--font-family-sans-serif);
+    font-size: larger;
+    font-weight: 400;
+    color: var( --gray-dark);
+    padding: 4px;
+}

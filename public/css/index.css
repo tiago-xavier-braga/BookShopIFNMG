@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
+:root{
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: rgb(248, 249, 250, 0.9);
+    --dark: #343a40;
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    --background-color-header: rgb(249, 250, 251, 0.7);
+}
+html{
+    background: url(../img/index/bg-green-right.png);
+    background-repeat: no-repeat;
+    background-size: 490px;
+    background-position: 100% 0%;
+    background-color: #dddcdc;
+}
+body{
+    margin: 0;
+    height: 100vh;
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    min-height: 60vh;
+    width: 100%;
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 30vh;
+    width: 80%;
+    border-radius: 10px;
+    background-color: var(--background-color-header);
+}
+.listBook{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    width: 100%;
+    min-height: 60vh;
+}
+.book{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 90%;
+    margin-top: 1rem;
+    background: var(--white);
+    border-radius: 10px;
+}
+.book img{
+    width: 40%;
+}
+.coverBook{
+    margin-top: 10px;
+}
+.fontText {
+    font-family: 'Ubuntu', sans-serif;
+    max-width: 25ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.priceBook{
+    font-size: x-large;
+    text-align: center;
+    font-family: var(--font-family-sans-serif);
+    font-weight: 700;
+    color: var(--green);
+}
+.boxStar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.countReview{
+    font-family: 'Ubuntu';
+}
+.link{
+    color: var(--blue);
+    font-size: larger;
+    font-family: 'Ubuntu';
+    font-weight: 600;
+}
+.fontAlert{
+    font-size: larger;
+    font-family: 'Ubuntu';
+    color: var(--white);
+    text-align: center;
+    background-color: #dc3545;
+    width: 100%;
+}

@@ -1,0 +1,14 @@
+@media only screen and (max-width: 768px){
+    html{
+        background-size: 290px;
+    }
+    .headerTitle h1{
+        font-size: x-large;
+    }
+    .listBook{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}

@@ -41,9 +41,10 @@
         echo $b1;
         */
         $database = new fakeDB();
-        foreach ($database->recoverAllBook() as $key => $value) {
+        /*foreach ($database->recoverAllBook() as $key => $value) {
             echo $value;
-        }
+        }*/
+        echo '<p>' . $database->recoverBook(2) . '</p>';
     ?>
 </body>
 </html>

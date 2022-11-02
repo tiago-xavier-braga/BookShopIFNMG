@@ -6,16 +6,16 @@
     {
 
         public $code;
-        private $title;
-        private $description;
-        private $author;
-        private $publisher;
-        private $edition;
-        private $pages;
-        private $year;
-        private $release;
-        private $price;
-        private $review; 
+        public $title;
+        public $description;
+        public $author;
+        public $publisher;
+        public $edition;
+        public $pages;
+        public $year;
+        public $release;
+        public $price;
+        public $review; 
 
         public function calculatePercentReview($index){
             $totalQuantify = 0;
@@ -69,7 +69,7 @@
                 $textReview .= '' . $key . ': ' . $value . '</br>';
             }
             return 
-            '' . $this->code . '</br>'
+            /*'' . $this->code . '</br>'
             . $this->title . '</br>'
             . $this->description . '</br>'
             . $textAuthor . '</br>'
@@ -79,7 +79,8 @@
             . $this->year . '</br>'
             . $this->release . '</br>'
             . $this->price . '</br>'
-            . $textReview  . '</br>' ;
+            . $textReview  . '</br>' ;*/
+            array($this->code, $this->title, $this->description, $textAuthor, $this->publisher, $this->edition, $this->pages, $this->year, $this->release, $this->price, $textReview);
         }
     }
 ?>
