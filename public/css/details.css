@@ -48,70 +48,89 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 30vh;
+    min-height: 60vh;
     width: 80%;
     border-radius: 10px;
     background-color: var(--background-color-header);
-}
-.listBook{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
-    width: 100%;
-    min-height: 60vh;
-}
-.book{
-    display: flex;
     flex-direction: column;
+}
+.bookInfo{
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: start;
-    width: 90%;
-    margin-top: 1rem;
-    background: var(--white);
-    border-radius: 10px;
+    width: 100%;
+    margin-top: 2rem;
 }
-.imgBook{
-    width: 120px;
-    opacity: 0.7;
+.textInfo{
+    margin-left: 5rem;
+    font-family: 'Ubuntu';
 }
-.coverBook{
-    margin-top: 10px;
-    width: 40%;
-}
-.fontText {
-    font-family: 'Ubuntu', sans-serif;
-    max-width: 25ch;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-.priceBook{
+.textInfo h2{
+    font-family: 'Ubuntu';
     font-size: x-large;
-    text-align: center;
-    font-family: var(--font-family-sans-serif);
-    font-weight: 700;
-    color: var(--green);
+}
+.bookCover{
+    width: 20%;
+    margin-left: 2rem;
 }
 .boxStar{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
+    margin-left: 2rem;
     width: 100%;
+}
+.imgBook{
+    width: 120px;
 }
 .starGreyBook{
     width: 120px;
-    margin-left: -20px;
     position: absolute;
 }
-.countReview{
+.descriptionBox{
+    margin: 2rem;
     font-family: 'Ubuntu';
+    font-size: large;
 }
-.fontAlert{
-    font-size: larger;
-    font-family: 'Ubuntu';
-    color: var(--white);
-    text-align: center;
-    background-color: #dc3545;
+.reviewBox{
     width: 100%;
+    font-family: 'Ubuntu';
+    margin-bottom: 2rem;
+}
+.reviewBox h3{
+    margin-left: 2rem;
+}
+.starBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin: 1rem 0 0 2rem;
+}
+.starBox img{
+    position: absolute;
+    width: 100px;
+}
+.basePorcent{
+    width: 200px;
+    height: 25px;
+    margin-left: 140px;
+    border-radius: 50px;
+    background-color: var(--gray);
+}
+.goldPorcent{
+    height: 25px;
+    width: 120px;
+    margin-left: 140px;
+    border-radius: 50px;
+    background-color: var(--yellow);
+    margin-left: -200px;
+    position: relative;
+}
+.starBox p{
+    font-family: 'Ubuntu';
+    font-weight: 600;
+    margin-left: 100px;
 }

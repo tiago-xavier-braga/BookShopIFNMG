@@ -19,7 +19,6 @@
     <main>
         <div class="content">
             <div class="listBook">
-
         <?php
 
         $database = new fakeDB();
@@ -46,14 +45,14 @@ BOOK;
             }else{
                 $boxBook .= '</div>';
             }
-            $boxBook .= '<p class="priceBook">R$ %.2f</p><a href="/" class="link">Detalhe</a>';
+            $boxBook .= '<p class="priceBook">R$ %.2f</p><form action="details.php" method="get">                <input type="number" name="code" id="code" value="%d" style="display:none;"><button type="submit" class="link" style="border:none; background-color:transparent;">Detalhes</button></form>';
             if ($value->release == true) {
                 # code...
                 $boxBook .= '<p class="fontAlert"> Lançamento </p></div>';
             } else {
                 $boxBook .= '</div>';
             }
-            printf($boxBook, $value->code, $value->title, $clipStar, $clipStar, $value->price, $value->code);
+            printf($boxBook, $value->code, $value->title, $clipStar, $clipStar, $value->price, $value->code, $value->code);
         }
         ?>
             </div>

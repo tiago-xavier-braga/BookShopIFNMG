@@ -44,11 +44,8 @@
         /*foreach ($database->recoverAllBook() as $key => $value) {
             echo $value;
         }*/
-        foreach ($database->recoverAllBook() as $key => $value) {
-            # code... 
-            $text = '%.2f </br>';
-            printf($text, $num);
-        }
+        $array = $database->recoverBook(2);
+        echo '<p>'. $array->title . '</p>';
     ?>
 </body>
 </html>
