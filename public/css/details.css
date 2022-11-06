@@ -117,14 +117,13 @@ main{
     width: 200px;
     height: 25px;
     margin-left: 140px;
-    border-radius: 50px;
+    border-radius: 5px;
     background-color: var(--gray);
 }
 .goldPorcent{
     height: 25px;
-    width: 120px;
-    margin-left: 140px;
-    border-radius: 50px;
+    max-width: 200px;
+    border-radius: 5px;
     background-color: var(--yellow);
     margin-left: -200px;
     position: relative;
@@ -132,5 +131,6 @@ main{
 .starBox p{
     font-family: 'Ubuntu';
     font-weight: 600;
-    margin-left: 100px;
+    position: absolute;
+    margin-left: 400px;
 }

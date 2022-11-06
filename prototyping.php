@@ -45,7 +45,7 @@
             echo $value;
         }*/
         $array = $database->recoverBook(2);
-        echo '<p>'. $array->title . '</p>';
+        echo '<p>'. $array->calculatePercentReview(2) . '</p>';
     ?>
 </body>
 </html>

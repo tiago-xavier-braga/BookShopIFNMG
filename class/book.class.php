@@ -23,9 +23,8 @@
             foreach ($this->review as $key => $value) {
                 $totalQuantify += $value;
             }
-            $percent = $array[$index] / $totalQuantify;
             //echo '</br> Porcento: ' . $percent . '';
-            return $percent;
+            return $array[$index] / $totalQuantify;
         }
         
         public function calculateAverageRating()

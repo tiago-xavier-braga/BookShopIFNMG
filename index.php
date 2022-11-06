@@ -45,7 +45,7 @@ BOOK;
             }else{
                 $boxBook .= '</div>';
             }
-            $boxBook .= '<p class="priceBook">R$ %.2f</p><form action="details.php" method="get">                <input type="number" name="code" id="code" value="%d" style="display:none;"><button type="submit" class="link" style="border:none; background-color:transparent;">Detalhes</button></form>';
+            $boxBook .= '<p class="priceBook">R$ %.2f</p><a href="details.php?code=%d" class="link" style="color: var(--blue); font-size: larger; text-decoration: none; font-family: "Ubuntu";">Detalhes</a>';
             if ($value->release == true) {
                 # code...
                 $boxBook .= '<p class="fontAlert"> Lançamento </p></div>';
